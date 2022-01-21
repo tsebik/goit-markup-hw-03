@@ -67,8 +67,18 @@ a {
 
 /* шапка */
 
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid tomato;
+}
+
 .header {
-  padding: 32px 215px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-container {
@@ -90,16 +100,8 @@ a {
   margin-left: auto;
 }
 
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .logo {
-  margin-right: 73px;
+  margin-right: 93px;
 
   color: var(--accent-color);
   font-family: "Raleway", sans-serif;
@@ -112,6 +114,10 @@ a {
   color: var(--black-color);
 }
 
+.navigation-link + .navigation-link {
+  margin-left: 50px;
+}
+
 .navigation-tel {
   margin-left: 50px;
 }
@@ -120,10 +126,6 @@ a {
 
 .nav-link {
   color: var(--primary-text-color);
-}
-
-.navigation-link + .navigation-link {
-  margin-left: 50px;
 }
 
 .nav-link.current {
@@ -175,18 +177,19 @@ a {
 
 /*section */
 
+.section-tasks,
+.section-work,
+.section-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .tasks-list {
   display: flex;
 }
 
 .task-text + .task-text {
   margin-left: 30px;
-}
-
-.section-tasks,
-.section-work,
-.section-team {
-  padding: 94px 215px;
 }
 
 .tasks-title {
@@ -198,10 +201,23 @@ a {
   text-transform: uppercase;
 }
 
+.work-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.work-photo {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+}
+
 .work-title,
 .team-title {
   margin-bottom: 50px;
+}
 
+.work-title,
+.team-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -213,28 +229,13 @@ a {
   color: var(--paragraph-color);
 }
 
-.section-team {
-  background-color: var(--bg-secondary);
-}
-
-.work-photo {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
-}
-
-.team-photo {
-  flex-basis: calc(100% / 4 - 30px);
-  margin-left: 30px;
-}
-
-.work-list {
-  display: flex;
-  margin-left: -30px;
-}
-
 .team-list {
   display: flex;
   margin-left: -30px;
+}
+
+.section-team {
+  background-color: var(--bg-secondary);
 }
 
 .img-team-title {
@@ -243,7 +244,19 @@ a {
 
 .section-title-team {
   margin-bottom: 10px;
+}
 
+.team-photo {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+
+  text-align: center;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.section-title-team {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -257,6 +270,22 @@ a {
 
 /* footer */
 
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--bg-color);
+}
+
+.footer-address {
+  margin-top: 20px;
+  margin-bottom: 9px;
+}
+
+.footer-link {
+  margin-bottom: 9px;
+}
+
 .tasks-paragraph,
 .footer-address,
 .footer-mail,
@@ -264,12 +293,6 @@ a {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
-}
-
-.footer {
-  padding: 60px 215px;
-
-  background-color: var(--bg-color);
 }
 
 .footer-logo,
@@ -291,18 +314,9 @@ a {
   color: var(--accent-color);
 }
 
-.footer-address,
-.footer-link {
-  margin-bottom: 9px;
-}
-
-.footer-address {
-  margin-top: 20px;
-}
 /*buttons */
 
 .hero-button {
-  display: inline-block;
   padding: 10px 32px;
 
   min-width: 200px;
@@ -322,12 +336,38 @@ a {
 
 /* portfolio */
 
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.filters-btn {
+  margin-bottom: 50px;
+}
+
+.img-projects {
+  flex-basis: calc(100% / 9 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+  border: 0 solid #eeeeee;
+}
+
+.portfolio-img {
+  margin-bottom: 20px;
+}
+
 /* button-portfolio */
 
 .filters-btn {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .filters-list + .filters-list {
@@ -336,9 +376,8 @@ a {
 
 .filters-btn-list {
   display: inline-block;
-  padding: 6px 22px;
-  margin-bottom: 50px;
   border-radius: 4px;
+  padding: 6px 22px;
 
   background-color: var(--bg-secondary);
   color: var(--primary-text-color);
@@ -360,22 +399,6 @@ a {
 .filters-btn-list.current {
   background-color: var(--accent-color);
   color: var(--white-color);
-}
-
-.portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.img-projects {
-  width: calc(100% / 3 - 30px);
-  margin-left: 30px;
-  margin-bottom: 30px;
-}
-
-.projects-list {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .projects-title {
