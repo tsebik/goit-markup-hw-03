@@ -76,8 +76,7 @@ a {
 }
 
 .header {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  border: 1px solid #ececec;
 }
 
 .header-container {
@@ -94,13 +93,23 @@ a {
   display: flex;
 }
 
+.nav-link {
+  padding: 32px 0;
+}
+
 .nav-info {
   display: flex;
   margin-left: auto;
 }
 
+.nav-mail,
+.nav-tel {
+  padding: 32px 0;
+}
+
 .logo {
   margin-right: 93px;
+  padding: 24px 0;
 
   color: var(--accent-color);
   font-family: "Raleway", sans-serif;
@@ -177,17 +186,22 @@ a {
 /*section */
 
 .section-tasks,
-.section-work,
 .section-team {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.tasks-list {
-  display: flex;
+.section-work {
+  padding-bottom: 94px;
 }
 
-.task-text + .task-text {
+.tasks-list {
+  display: flex;
+  margin-left: -30px;
+}
+
+.task-text {
+  flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
 }
 
@@ -245,6 +259,10 @@ a {
   margin-bottom: 10px;
 }
 
+.container-team {
+  padding: 20px 24px;
+}
+
 .team-photo {
   flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
@@ -253,6 +271,7 @@ a {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
 }
 
 .section-title-team {
@@ -278,11 +297,10 @@ a {
 
 .footer-address {
   margin-top: 20px;
-  margin-bottom: 9px;
 }
 
 .footer-link {
-  margin-bottom: 9px;
+  margin-top: 9px;
 }
 
 .tasks-paragraph,
@@ -331,6 +349,7 @@ a {
   text-align: center;
   letter-spacing: 0.06em;
   border-radius: 4px;
+  border: 0;
 }
 
 /* portfolio */
@@ -362,6 +381,10 @@ a {
   margin-bottom: 20px;
 }
 
+.carts {
+  padding: 20px 24px;
+}
+
 /* button-portfolio */
 
 .filters-btn {
@@ -386,7 +409,7 @@ a {
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
-  min-width: 128px;
+  border: 0;
 }
 
 .filters-btn-list:hover,
